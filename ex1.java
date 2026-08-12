@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class ex1 {
     public static void main(String[] args) {
         System.out.println(fatorial(5));
@@ -6,6 +8,11 @@ public class ex1 {
         System.out.println(somatorioEntre(6, 8));
         System.out.println(isPal("arara"));
         System.out.println(convBase2(133));
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(10);
+        arr.add(21);
+        arr.add(5);
+        System.out.println(somatorio(arr));
     }
 
     public static int fatorial(int n) {
@@ -87,5 +94,13 @@ public class ex1 {
         }
 
         return convBase2(n/2) + n%2;
+    }
+
+    public static int somatorio(ArrayList<Integer> arr) {
+        if (arr.isEmpty()){
+            return 0;
+        }
+
+        return (int)arr.remove(0) + somatorio(arr);
     }
 }
