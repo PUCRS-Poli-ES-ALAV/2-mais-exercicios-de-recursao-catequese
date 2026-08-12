@@ -5,8 +5,7 @@ public class ex1 {
         System.out.println(fibonacci(6));
         System.out.println(somatorioEntre(6, 8));
         System.out.println(isPal("arara"));
-        System.out.println(isPal(""));
-        System.out.println(isPal("sandro"));
+        System.out.println(convBase2(133));
     }
 
     public static int fatorial(int n) {
@@ -77,5 +76,16 @@ public class ex1 {
         } else {
             return false;
         }
+    }
+
+    public static String convBase2(int n) {
+        if (n == 1){
+            return "1";
+        }
+        if (n == 0){
+            return "0";
+        }
+
+        return convBase2(n/2) + n%2;
     }
 }
